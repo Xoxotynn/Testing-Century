@@ -10,11 +10,12 @@
 		5299C49CC1D82CFF0C30CD26 /* Pods_TestingCenturyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159DC844ACBA07FC7718BDD6 /* Pods_TestingCenturyTests.framework */; };
 		599DFAD296DBC663F1FFD1CB /* Pods_TestingCentury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF76E70E0C9E040ADACAD30 /* Pods_TestingCentury.framework */; };
 		8CA1437E92E18F6E668F17BB /* Pods_TestingCentury_TestingCenturyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ABED3264CA315FAF9240B5 /* Pods_TestingCentury_TestingCenturyUITests.framework */; };
+		A96F746027EFC6C000AD4B7B /* GetCenturyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96F745F27EFC6C000AD4B7B /* GetCenturyTests.swift */; };
 		A98707A127EE94510023114D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98707A027EE94510023114D /* AppDelegate.swift */; };
 		A98707A327EE94510023114D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98707A227EE94510023114D /* SceneDelegate.swift */; };
 		A98707A527EE94510023114D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98707A427EE94510023114D /* ViewController.swift */; };
 		A98707AA27EE94530023114D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98707A927EE94530023114D /* Assets.xcassets */; };
-		A98707B827EE94530023114D /* TestingCenturyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98707B727EE94530023114D /* TestingCenturyTests.swift */; };
+		A98707B827EE94530023114D /* WhatCenturyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98707B727EE94530023114D /* WhatCenturyTests.swift */; };
 		A98707C227EE94530023114D /* TestingCenturyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98707C127EE94530023114D /* TestingCenturyUITests.swift */; };
 		A98707C427EE94530023114D /* TestingCenturyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98707C327EE94530023114D /* TestingCenturyUITestsLaunchTests.swift */; };
 		A9E61D0B27EEA0C20099023B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E61D0A27EEA0C20099023B /* LaunchScreen.storyboard */; };
@@ -43,6 +44,7 @@
 		425150BAD07DBDC96939B87B /* Pods-TestingCentury-TestingCenturyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingCentury-TestingCenturyUITests.release.xcconfig"; path = "Target Support Files/Pods-TestingCentury-TestingCenturyUITests/Pods-TestingCentury-TestingCenturyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		59ABED3264CA315FAF9240B5 /* Pods_TestingCentury_TestingCenturyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingCentury_TestingCenturyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F40BB93527C25D7CE7E40B3 /* Pods-TestingCenturyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingCenturyTests.release.xcconfig"; path = "Target Support Files/Pods-TestingCenturyTests/Pods-TestingCenturyTests.release.xcconfig"; sourceTree = "<group>"; };
+		A96F745F27EFC6C000AD4B7B /* GetCenturyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCenturyTests.swift; sourceTree = "<group>"; };
 		A987079D27EE94510023114D /* TestingCentury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingCentury.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98707A027EE94510023114D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A98707A227EE94510023114D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +52,7 @@
 		A98707A927EE94530023114D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A98707AE27EE94530023114D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A98707B327EE94530023114D /* TestingCenturyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingCenturyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A98707B727EE94530023114D /* TestingCenturyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingCenturyTests.swift; sourceTree = "<group>"; };
+		A98707B727EE94530023114D /* WhatCenturyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatCenturyTests.swift; sourceTree = "<group>"; };
 		A98707BD27EE94530023114D /* TestingCenturyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingCenturyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98707C127EE94530023114D /* TestingCenturyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingCenturyUITests.swift; sourceTree = "<group>"; };
 		A98707C327EE94530023114D /* TestingCenturyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingCenturyUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -137,7 +139,8 @@
 		A98707B627EE94530023114D /* TestingCenturyTests */ = {
 			isa = PBXGroup;
 			children = (
-				A98707B727EE94530023114D /* TestingCenturyTests.swift */,
+				A98707B727EE94530023114D /* WhatCenturyTests.swift */,
+				A96F745F27EFC6C000AD4B7B /* GetCenturyTests.swift */,
 			);
 			path = TestingCenturyTests;
 			sourceTree = "<group>";
@@ -412,7 +415,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A98707B827EE94530023114D /* TestingCenturyTests.swift in Sources */,
+				A98707B827EE94530023114D /* WhatCenturyTests.swift in Sources */,
+				A96F746027EFC6C000AD4B7B /* GetCenturyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

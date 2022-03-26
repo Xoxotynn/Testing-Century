@@ -20,13 +20,23 @@ class ViewController: UIViewController {
     }
     
     func whatCentury(_ year: String) -> String {
-        guard let intYear = Int(year) else { return "" }
+        guard let century = getCentury(ofYear: year) else {
+            return ""
+        }
         
-        let century = (intYear - 1) / 100 + 1
         let formatter = NumberFormatter()
         formatter.numberStyle = .ordinal
         
         return formatter.string(from: century as NSNumber) ?? ""
+    }
+    
+    func getCentury(ofYear year: String) -> Int? {
+        guard let intYear = Int(year) else { return nil }
+        guard intYear != 0 else { return nil }
+        
+        return intYear > 0 ?
+            (intYear - 1) / 100 + 1 :
+            (intYear + 1) / 100 - 1
     }
 }
 
