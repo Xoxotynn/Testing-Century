@@ -2,6 +2,9 @@ import XCTest
 @testable import TestingCentury
 
 class WhatCenturyTests: XCTestCase {
+    
+    private var testedValue: String? = nil
+    private var expectedResult: String? = nil
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -10,127 +13,58 @@ class WhatCenturyTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    // MARK: 'st' ending tests
-    func testOneDigitCenturyStEnding() throws {
-        let vc = ViewController()
+    
+    override open class var defaultTestSuite: XCTestSuite {
+        let testSuite = XCTestSuite(name: NSStringFromClass(self))
+        // 'st' ending tests
+        addTests(with: "64", expected: "1st", to: testSuite)
+        addTests(with: "2050", expected: "21st", to: testSuite)
         
-        let century = vc.whatCentury("64")
-        XCTAssertEqual("1st",
-                       century,
-                       "Wrong output with input '1'")
+        // 'nd' ending tests
+        addTests(with: "140", expected: "2nd", to: testSuite)
+        addTests(with: "3130", expected: "32nd", to: testSuite)
+        
+        // 'rd' ending tests
+        addTests(with: "280", expected: "3rd", to: testSuite)
+        addTests(with: "4210", expected: "43rd", to: testSuite)
+        
+        // 'th' ending tests
+        addTests(with: "555", expected: "6th", to: testSuite)
+        addTests(with: "5660", expected: "57th", to: testSuite)
+        
+        // 'th' second ten ending tests
+        addTests(with: "1022", expected: "11th", to: testSuite)
+        addTests(with: "1132", expected: "12th", to: testSuite)
+        addTests(with: "1210", expected: "13th", to: testSuite)
+        
+        // BC century tests
+        addTests(with: "-555", expected: "6th BC", to: testSuite)
+        addTests(with: "-5660", expected: "57th BC", to: testSuite)
+        addTests(with: "-1022", expected: "11th BC", to: testSuite)
+        addTests(with: "-1132", expected: "12th BC", to: testSuite)
+        addTests(with: "-1210", expected: "13th BC", to: testSuite)
+        
+        // Invalid input tests
+        addTests(with: "0", expected: "", to: testSuite)
+        addTests(with: "invalid", expected: "", to: testSuite)
+        return testSuite
     }
     
-    func testTwoDigitCenturyStEnding() throws {
+    func testCentury() throws {
         let vc = ViewController()
         
-        let century = vc.whatCentury("2050")
-        XCTAssertEqual("21st",
-                       century,
-                       "Wrong output with input '2001'")
+        let century = vc.whatCentury(testedValue ?? "")
+        XCTAssertEqual(expectedResult, century)
     }
     
-    // MARK: 'nd' ending tests
-    func testOneDigitCenturyNdEnding() throws {
-        let vc = ViewController()
-        
-        let century = vc.whatCentury("140")
-        XCTAssertEqual("2nd",
-                       century,
-                       "Wrong output with input '140'")
-    }
-    
-    func testTwoDigitCenturyNdEnding() throws {
-        let vc = ViewController()
-        
-        let century = vc.whatCentury("3130")
-        XCTAssertEqual("32nd",
-                       century,
-                       "Wrong output with input '3130'")
-    }
-    
-    // MARK: 'rd' ending tests
-    func testOneDigitCenturyRdEnding() throws {
-        let vc = ViewController()
-        
-        let century = vc.whatCentury("280")
-        XCTAssertEqual("3rd",
-                       century,
-                       "Wrong output with input '280'")
-    }
-    
-    func testTwoDigitCenturyRdEnding() throws {
-        let vc = ViewController()
-        
-        let century = vc.whatCentury("4210")
-        XCTAssertEqual("43rd",
-                       century,
-                       "Wrong output with input '4210'")
-    }
-    
-    // MARK: 'th' ending tests
-    func testOneDigitCenturyThEnding() throws {
-        let vc = ViewController()
-        
-        let century = vc.whatCentury("555")
-        XCTAssertEqual("6th",
-                       century,
-                       "Wrong output with input '555'")
-    }
-    
-    func testTwoDigitCenturyThEnding() throws {
-        let vc = ViewController()
-        
-        let century = vc.whatCentury("5660")
-        XCTAssertEqual("57th",
-                       century,
-                       "Wrong output with input '5660'")
-    }
-    
-    // MARK: 'th' second ten tests
-    func testThEnding11Century() throws {
-        let vc = ViewController()
-        
-        let century = vc.whatCentury("1022")
-        XCTAssertEqual("11th",
-                       century,
-                       "Wrong output with input '1022'")
-    }
-    
-    func testThEnding12Century() throws {
-        let vc = ViewController()
-        
-        let century = vc.whatCentury("1132")
-        XCTAssertEqual("12th",
-                       century,
-                       "Wrong output with input '1022'")
-    }
-    
-    func testThEnding13Century() throws {
-        let vc = ViewController()
-        
-        let century = vc.whatCentury("1202")
-        XCTAssertEqual("13th",
-                       century,
-                       "Wrong output with input '1022'")
-    }
-    
-    // MARK: Invalid input tests
-    func test0YearInput() throws {
-        let vc = ViewController()
-        
-        let century = vc.whatCentury("0")
-        XCTAssertEqual("",
-                       century,
-                       "Wrong output with input '0'")
-    }
-    
-    func testNotNumberInput() throws {
-        let vc = ViewController()
-        
-        let century = vc.whatCentury("invalid")
-        XCTAssertEqual("",
-                       century,
-                       "Wrong output with input 'invalid'")
+    private class func addTests(with value: String,
+                                expected result: String,
+                                to testSuite: XCTestSuite) {
+        testInvocations.forEach { invocation in
+            let testCase = WhatCenturyTests(invocation: invocation)
+            testCase.testedValue = value
+            testCase.expectedResult = result
+            testSuite.addTest(testCase)
+        }
     }
 }

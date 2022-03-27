@@ -2,6 +2,9 @@ import XCTest
 @testable import TestingCentury
 
 class GetCenturyTests: XCTestCase {
+    
+    private var testedValue: String? = nil
+    private var expectedResult: Int? = nil
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -11,92 +14,65 @@ class GetCenturyTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    // MARK: Century detection tests
-    func testCenturyDetection0Year() throws {
-        let vc = ViewController()
+    override open class var defaultTestSuite: XCTestSuite {
+        let testSuite = XCTestSuite(name: NSStringFromClass(self))
+        // Positive number input tests
+        addTests(with: "501", expected: 6, to: testSuite)
+        addTests(with: "547", expected: 6, to: testSuite)
+        addTests(with: "600", expected: 6, to: testSuite)
+        addTests(with: "4301", expected: 44, to: testSuite)
+        addTests(with: "4387", expected: 44, to: testSuite)
+        addTests(with: "4400", expected: 44, to: testSuite)
         
-        let century = vc.getCentury(ofYear: "0")
-        XCTAssertNil(century, "Wrong century with input '0'")
+        // Negative(BC) number input tests
+        addTests(with: "-150", expected: -2, to: testSuite)
+        addTests(with: "-1130", expected: -12, to: testSuite)
+        
+        // Big int tests
+        addTests(with: "100100", expected: 1001, to: testSuite)
+        addTests(with: "100101", expected: 1002, to: testSuite)
+        addTests(with: "2100500", expected: 21005, to: testSuite)
+        addTests(with: "2100560", expected: 21006, to: testSuite)
+        addTests(with: "310200100", expected: 3102001, to: testSuite)
+        addTests(with: "310200140", expected: 3102002, to: testSuite)
+        
+        // Big negative int tests
+        addTests(with: "-100100", expected: -1001, to: testSuite)
+        addTests(with: "-100101", expected: -1002, to: testSuite)
+        addTests(with: "-2100500", expected: -21005, to: testSuite)
+        addTests(with: "-2100560", expected: -21006, to: testSuite)
+        addTests(with: "-310200100", expected: -3102001, to: testSuite)
+        addTests(with: "-310200140", expected: -3102002, to: testSuite)
+        
+        // Int max tests
+        addTests(with: String(describing: Int.max), expected: 92233720368547759, to: testSuite)
+        addTests(with: String(describing: Int.min), expected: -92233720368547759, to: testSuite)
+        
+        // Int overflow tests
+        addTests(with: "9223372036854775809", expected: nil, to: testSuite)
+        addTests(with: "-9223372036854775810", expected: nil, to: testSuite)
+        
+        // Invalid input tests
+        addTests(with: "0", expected: nil, to: testSuite)
+        addTests(with: "1f5", expected: nil, to: testSuite)
+        return testSuite
     }
     
-    func testOneDigitCenturyDetectionFirstYear() throws {
+    func testCentury() throws {
         let vc = ViewController()
         
-        let century = vc.getCentury(ofYear: "501")
-        XCTAssertEqual(6,
-                       century,
-                       "Wrong century with input '501'")
+        let century = vc.getCentury(ofYear: testedValue ?? "")
+        XCTAssertEqual(expectedResult, century)
     }
     
-    func testOneDigitCenturyDetectionRandomYear() throws {
-        let vc = ViewController()
-        
-        let century = vc.getCentury(ofYear: "547")
-        XCTAssertEqual(6,
-                       century,
-                       "Wrong century with input '547'")
-    }
-    
-    func testOneDigitCenturyDetectionLastYear() throws {
-        let vc = ViewController()
-        
-        let century = vc.getCentury(ofYear: "600")
-        XCTAssertEqual(6,
-                       century,
-                       "Wrong century with input '600'")
-    }
-    
-    func testTwoDigitCenturyDetectionFirstYear() throws {
-        let vc = ViewController()
-        
-        let century = vc.getCentury(ofYear: "4301")
-        XCTAssertEqual(44,
-                       century,
-                       "Wrong century with input '4301'")
-    }
-    
-    func testTwoDigitCenturyDetectionRandomYear() throws {
-        let vc = ViewController()
-        
-        let century = vc.getCentury(ofYear: "4387")
-        XCTAssertEqual(44,
-                       century,
-                       "Wrong century with input '4387'")
-    }
-    
-    func testTwoDigitCenturyDetectionLastYear() throws {
-        let vc = ViewController()
-        
-        let century = vc.getCentury(ofYear: "4400")
-        XCTAssertEqual(44,
-                       century,
-                       "Wrong century with input '4400'")
-    }
-    
-    // MARK: Negative century detection
-    func testOneDigitNegativeCentury() throws {
-        let vc = ViewController()
-        
-        let century = vc.getCentury(ofYear: "-150")
-        XCTAssertEqual(-2,
-                       century,
-                       "Wrong century with input '-150'")
-    }
-    
-    func testTwoDigitNegativeCentury() throws {
-        let vc = ViewController()
-        
-        let century = vc.getCentury(ofYear: "-1130")
-        XCTAssertEqual(-12,
-                       century,
-                       "Wrong century with input '-1130'")
-    }
-    
-    // MARK: Not number tests
-    func testNotNumberInput() throws {
-        let vc = ViewController()
-        
-        let century = vc.getCentury(ofYear: "1f5")
-        XCTAssertNil(century, "Wrong output with input '1f5'")
+    private class func addTests(with value: String,
+                                expected result: Int?,
+                                to testSuite: XCTestSuite) {
+        testInvocations.forEach { invocation in
+            let testCase = GetCenturyTests(invocation: invocation)
+            testCase.testedValue = value
+            testCase.expectedResult = result
+            testSuite.addTest(testCase)
+        }
     }
 }

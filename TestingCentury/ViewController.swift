@@ -27,7 +27,10 @@ class ViewController: UIViewController {
         let formatter = NumberFormatter()
         formatter.numberStyle = .ordinal
         
-        return formatter.string(from: century as NSNumber) ?? ""
+        guard let resultCentury = formatter.string(from: abs(century) as NSNumber) else {
+            return ""
+        }
+        return century > 0 ? resultCentury : resultCentury + " BC"
     }
     
     func getCentury(ofYear year: String) -> Int? {
