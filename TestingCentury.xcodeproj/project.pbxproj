@@ -19,6 +19,7 @@
 		A98707C227EE94530023114D /* TestingCenturyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98707C127EE94530023114D /* TestingCenturyUITests.swift */; };
 		A98707C427EE94530023114D /* TestingCenturyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98707C327EE94530023114D /* TestingCenturyUITestsLaunchTests.swift */; };
 		A9E61D0B27EEA0C20099023B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E61D0A27EEA0C20099023B /* LaunchScreen.storyboard */; };
+		A9FA999627FA638600DBCC66 /* CoreDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA999527FA638600DBCC66 /* CoreDataServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		A98707C127EE94530023114D /* TestingCenturyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingCenturyUITests.swift; sourceTree = "<group>"; };
 		A98707C327EE94530023114D /* TestingCenturyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingCenturyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A9E61D0A27EEA0C20099023B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A9FA999527FA638600DBCC66 /* CoreDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataServiceTests.swift; sourceTree = "<group>"; };
 		B1CE22728BBCE680DC667FCD /* Pods-TestingCentury.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingCentury.release.xcconfig"; path = "Target Support Files/Pods-TestingCentury/Pods-TestingCentury.release.xcconfig"; sourceTree = "<group>"; };
 		DF70EDDF629D4990D13D61D7 /* Pods-TestingCentury.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingCentury.debug.xcconfig"; path = "Target Support Files/Pods-TestingCentury/Pods-TestingCentury.debug.xcconfig"; sourceTree = "<group>"; };
 		ECDF603415B868D0F38DD502 /* Pods-TestingCentury-TestingCenturyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingCentury-TestingCenturyUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestingCentury-TestingCenturyUITests/Pods-TestingCentury-TestingCenturyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,8 +141,9 @@
 		A98707B627EE94530023114D /* TestingCenturyTests */ = {
 			isa = PBXGroup;
 			children = (
-				A98707B727EE94530023114D /* WhatCenturyTests.swift */,
-				A96F745F27EFC6C000AD4B7B /* GetCenturyTests.swift */,
+				A9FA999427FA636400DBCC66 /* E2E Tests */,
+				A9FA999327FA635D00DBCC66 /* Integration Tests */,
+				A9FA999227FA635200DBCC66 /* Unit Tests */,
 			);
 			path = TestingCenturyTests;
 			sourceTree = "<group>";
@@ -152,6 +155,30 @@
 				A98707C327EE94530023114D /* TestingCenturyUITestsLaunchTests.swift */,
 			);
 			path = TestingCenturyUITests;
+			sourceTree = "<group>";
+		};
+		A9FA999227FA635200DBCC66 /* Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A98707B727EE94530023114D /* WhatCenturyTests.swift */,
+				A96F745F27EFC6C000AD4B7B /* GetCenturyTests.swift */,
+			);
+			path = "Unit Tests";
+			sourceTree = "<group>";
+		};
+		A9FA999327FA635D00DBCC66 /* Integration Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A9FA999527FA638600DBCC66 /* CoreDataServiceTests.swift */,
+			);
+			path = "Integration Tests";
+			sourceTree = "<group>";
+		};
+		A9FA999427FA636400DBCC66 /* E2E Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "E2E Tests";
 			sourceTree = "<group>";
 		};
 		FA591AE30A992D312F777C2D /* Pods */ = {
@@ -415,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9FA999627FA638600DBCC66 /* CoreDataServiceTests.swift in Sources */,
 				A98707B827EE94530023114D /* WhatCenturyTests.swift in Sources */,
 				A96F746027EFC6C000AD4B7B /* GetCenturyTests.swift in Sources */,
 			);
