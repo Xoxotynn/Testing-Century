@@ -1,7 +1,7 @@
 import XCTest
 @testable import TestingCentury
 
-class CoreDataServiceTests: XCTestCase {
+class CoreDataServiceIntegrationTests: XCTestCase {
     
     override func setUpWithError() throws { }
 

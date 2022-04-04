@@ -19,7 +19,16 @@
 		A98707C227EE94530023114D /* TestingCenturyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98707C127EE94530023114D /* TestingCenturyUITests.swift */; };
 		A98707C427EE94530023114D /* TestingCenturyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98707C327EE94530023114D /* TestingCenturyUITestsLaunchTests.swift */; };
 		A9E61D0B27EEA0C20099023B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E61D0A27EEA0C20099023B /* LaunchScreen.storyboard */; };
-		A9FA999627FA638600DBCC66 /* CoreDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA999527FA638600DBCC66 /* CoreDataServiceTests.swift */; };
+		A9FA999627FA638600DBCC66 /* CoreDataServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA999527FA638600DBCC66 /* CoreDataServiceIntegrationTests.swift */; };
+		A9FA999A27FA64B400DBCC66 /* CenturyDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9FA999827FA64B400DBCC66 /* CenturyDatabase.xcdatamodeld */; };
+		A9FA999F27FA655C00DBCC66 /* CenturyCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA999D27FA655C00DBCC66 /* CenturyCoreData+CoreDataClass.swift */; };
+		A9FA99A027FA655C00DBCC66 /* CenturyCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA999D27FA655C00DBCC66 /* CenturyCoreData+CoreDataClass.swift */; };
+		A9FA99A127FA655C00DBCC66 /* CenturyCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA999E27FA655C00DBCC66 /* CenturyCoreData+CoreDataProperties.swift */; };
+		A9FA99A227FA655C00DBCC66 /* CenturyCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA999E27FA655C00DBCC66 /* CenturyCoreData+CoreDataProperties.swift */; };
+		A9FA99A427FA658000DBCC66 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA99A327FA658000DBCC66 /* CoreDataService.swift */; };
+		A9FA99A527FA658000DBCC66 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA99A327FA658000DBCC66 /* CoreDataService.swift */; };
+		A9FA99A727FA660D00DBCC66 /* Century.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA99A627FA660D00DBCC66 /* Century.swift */; };
+		A9FA99A827FA660D00DBCC66 /* Century.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA99A627FA660D00DBCC66 /* Century.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +67,12 @@
 		A98707C127EE94530023114D /* TestingCenturyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingCenturyUITests.swift; sourceTree = "<group>"; };
 		A98707C327EE94530023114D /* TestingCenturyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingCenturyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A9E61D0A27EEA0C20099023B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A9FA999527FA638600DBCC66 /* CoreDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataServiceTests.swift; sourceTree = "<group>"; };
+		A9FA999527FA638600DBCC66 /* CoreDataServiceIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataServiceIntegrationTests.swift; sourceTree = "<group>"; };
+		A9FA999927FA64B400DBCC66 /* CenturyDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CenturyDatabase.xcdatamodel; sourceTree = "<group>"; };
+		A9FA999D27FA655C00DBCC66 /* CenturyCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CenturyCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A9FA999E27FA655C00DBCC66 /* CenturyCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CenturyCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A9FA99A327FA658000DBCC66 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		A9FA99A627FA660D00DBCC66 /* Century.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Century.swift; sourceTree = "<group>"; };
 		B1CE22728BBCE680DC667FCD /* Pods-TestingCentury.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingCentury.release.xcconfig"; path = "Target Support Files/Pods-TestingCentury/Pods-TestingCentury.release.xcconfig"; sourceTree = "<group>"; };
 		DF70EDDF629D4990D13D61D7 /* Pods-TestingCentury.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingCentury.debug.xcconfig"; path = "Target Support Files/Pods-TestingCentury/Pods-TestingCentury.debug.xcconfig"; sourceTree = "<group>"; };
 		ECDF603415B868D0F38DD502 /* Pods-TestingCentury-TestingCenturyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingCentury-TestingCenturyUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestingCentury-TestingCenturyUITests/Pods-TestingCentury-TestingCenturyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +142,8 @@
 		A987079F27EE94510023114D /* TestingCentury */ = {
 			isa = PBXGroup;
 			children = (
+				A9FA999C27FA651400DBCC66 /* Model */,
+				A9FA999727FA649800DBCC66 /* CoreData */,
 				A98707A027EE94510023114D /* AppDelegate.swift */,
 				A98707A227EE94510023114D /* SceneDelegate.swift */,
 				A98707A427EE94510023114D /* ViewController.swift */,
@@ -141,7 +157,6 @@
 		A98707B627EE94530023114D /* TestingCenturyTests */ = {
 			isa = PBXGroup;
 			children = (
-				A9FA999427FA636400DBCC66 /* E2E Tests */,
 				A9FA999327FA635D00DBCC66 /* Integration Tests */,
 				A9FA999227FA635200DBCC66 /* Unit Tests */,
 			);
@@ -169,16 +184,36 @@
 		A9FA999327FA635D00DBCC66 /* Integration Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A9FA999527FA638600DBCC66 /* CoreDataServiceTests.swift */,
+				A9FA999527FA638600DBCC66 /* CoreDataServiceIntegrationTests.swift */,
 			);
 			path = "Integration Tests";
 			sourceTree = "<group>";
 		};
-		A9FA999427FA636400DBCC66 /* E2E Tests */ = {
+		A9FA999727FA649800DBCC66 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				A9FA999B27FA650200DBCC66 /* CoreData Entities */,
+				A9FA999827FA64B400DBCC66 /* CenturyDatabase.xcdatamodeld */,
+				A9FA99A327FA658000DBCC66 /* CoreDataService.swift */,
 			);
-			path = "E2E Tests";
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		A9FA999B27FA650200DBCC66 /* CoreData Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A9FA999D27FA655C00DBCC66 /* CenturyCoreData+CoreDataClass.swift */,
+				A9FA999E27FA655C00DBCC66 /* CenturyCoreData+CoreDataProperties.swift */,
+			);
+			path = "CoreData Entities";
+			sourceTree = "<group>";
+		};
+		A9FA999C27FA651400DBCC66 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A9FA99A627FA660D00DBCC66 /* Century.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		FA591AE30A992D312F777C2D /* Pods */ = {
@@ -432,9 +467,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9FA99A427FA658000DBCC66 /* CoreDataService.swift in Sources */,
 				A98707A527EE94510023114D /* ViewController.swift in Sources */,
+				A9FA99A727FA660D00DBCC66 /* Century.swift in Sources */,
+				A9FA99A127FA655C00DBCC66 /* CenturyCoreData+CoreDataProperties.swift in Sources */,
 				A98707A127EE94510023114D /* AppDelegate.swift in Sources */,
+				A9FA999F27FA655C00DBCC66 /* CenturyCoreData+CoreDataClass.swift in Sources */,
 				A98707A327EE94510023114D /* SceneDelegate.swift in Sources */,
+				A9FA999A27FA64B400DBCC66 /* CenturyDatabase.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,9 +482,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9FA999627FA638600DBCC66 /* CoreDataServiceTests.swift in Sources */,
+				A9FA99A227FA655C00DBCC66 /* CenturyCoreData+CoreDataProperties.swift in Sources */,
+				A9FA999627FA638600DBCC66 /* CoreDataServiceIntegrationTests.swift in Sources */,
+				A9FA99A827FA660D00DBCC66 /* Century.swift in Sources */,
 				A98707B827EE94530023114D /* WhatCenturyTests.swift in Sources */,
 				A96F746027EFC6C000AD4B7B /* GetCenturyTests.swift in Sources */,
+				A9FA99A527FA658000DBCC66 /* CoreDataService.swift in Sources */,
+				A9FA99A027FA655C00DBCC66 /* CenturyCoreData+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,6 +809,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A9FA999827FA64B400DBCC66 /* CenturyDatabase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A9FA999927FA64B400DBCC66 /* CenturyDatabase.xcdatamodel */,
+			);
+			currentVersion = A9FA999927FA64B400DBCC66 /* CenturyDatabase.xcdatamodel */;
+			path = CenturyDatabase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A987079527EE94510023114D /* Project object */;
 }
