@@ -5,6 +5,11 @@ import CoreData
 public class CenturyCoreData: NSManagedObject {
     
     // MARK: - Public methods
+    static func getAll(context: NSManagedObjectContext) -> [CenturyCoreData] {
+        let request = CenturyCoreData.fetchRequest()
+        return (try? context.fetch(request)) ?? []
+    }
+    
     static func get(withYear year: String,
                     context: NSManagedObjectContext) -> CenturyCoreData? {
         let request = CenturyCoreData.fetchRequest()
@@ -36,12 +41,6 @@ public class CenturyCoreData: NSManagedObject {
         }
 
         context.delete(centuryCoreData)
-    }
-
-    static func count(centuriesWithYear year: String,
-                      context: NSManagedObjectContext) -> Int? {
-        let request = CenturyCoreData.fetchRequest()
-        return try? context.fetch(request).count
     }
 
     func toDomainModel() -> Century {

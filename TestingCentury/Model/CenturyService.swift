@@ -9,8 +9,12 @@ class CenturyService {
     }
     
     // MARK: - Public methods
+    func getAllCenturies() -> [Century] {
+        localDataSource.getAllCenturies()
+    }
+    
     func getCentury(withYear year: String) -> Century? {
-        return localDataSource.getCentury(withYear: year)
+        localDataSource.getCentury(withYear: year)
     }
     
     func addCentury(_ century: Century) {
@@ -19,9 +23,5 @@ class CenturyService {
     
     func deleteCentury(_ century: Century) {
         localDataSource.deleteCentury(century)
-    }
-    
-    func countCenturies(withYear year: String) -> Int {
-        return localDataSource.countCenturies(withYear: year)
     }
 }

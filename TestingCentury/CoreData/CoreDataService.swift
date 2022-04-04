@@ -36,8 +36,14 @@ class CoreDataService {
         return shared
     }
     
+    func getAllCenturies() -> [Century] {
+        CenturyCoreData
+            .getAll(context: context)
+            .compactMap { $0.toDomainModel() }
+    }
+    
     func getCentury(withYear year: String) -> Century? {
-        return CenturyCoreData
+        CenturyCoreData
             .get(withYear: year, context: context)?
             .toDomainModel()
     }
@@ -50,12 +56,6 @@ class CoreDataService {
     func deleteCentury(_ century: Century) {
         CenturyCoreData.delete(century: century, context: context)
         saveContext()
-    }
-    
-    func countCenturies(withYear year: String) -> Int {
-        return CenturyCoreData.count(
-            centuriesWithYear: year,
-            context: context) ?? 0
     }
     
     // MARK: - Private Methods
