@@ -3,6 +3,9 @@ import SnapKit
 
 class ViewController: UIViewController {
 
+    private let centuryService = CenturyService(
+        localDataSource: CoreDataService.shared())
+    
     private let centuryLabel = UILabel()
     
     override func viewDidLoad() {
@@ -11,7 +14,7 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(centuryLabel)
         
-        centuryLabel.text = whatCentury("2000")
+        centuryLabel.text = centuryService.getCentury(withYear: "2000")?.century
         centuryLabel.font = .systemFont(ofSize: 32)
         centuryLabel.textAlignment = .center
         centuryLabel.snp.makeConstraints { make in
