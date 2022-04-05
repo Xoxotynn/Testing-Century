@@ -9,7 +9,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.windowScene = windowScene
         
-        window?.rootViewController = ViewController()
+        let tabBarVc = UITabBarController()
+        let vc = ViewController()
+        let historyVc = HistoryViewController()
+        vc.tabBarItem = UITabBarItem(title: "Century",
+                                     image: UIImage(systemName: "lanyardcard"),
+                                     selectedImage: nil)
+        historyVc.tabBarItem = UITabBarItem(title: "History",
+                                            image: UIImage(systemName: "list.dash"),
+                                            selectedImage: nil)
+        
+        tabBarVc.setViewControllers([vc, historyVc], animated: true)
+        
+        window?.rootViewController = tabBarVc
         window?.makeKeyAndVisible()
     }
 

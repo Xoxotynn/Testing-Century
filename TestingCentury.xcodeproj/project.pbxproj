@@ -41,6 +41,7 @@
 		A9FA99CF27FAFCCB00DBCC66 /* MockPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA99CE27FAFCCB00DBCC66 /* MockPersistentContainer.swift */; };
 		A9FA99D027FAFCCB00DBCC66 /* MockPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA99CE27FAFCCB00DBCC66 /* MockPersistentContainer.swift */; };
 		A9FA99D127FAFCCB00DBCC66 /* MockPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA99CE27FAFCCB00DBCC66 /* MockPersistentContainer.swift */; };
+		A9FA99D327FC22A800DBCC66 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA99D227FC22A800DBCC66 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		A9FA99C627FAEAFB00DBCC66 /* CenturyCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CenturyCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A9FA99C727FAEAFB00DBCC66 /* CenturyCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CenturyCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A9FA99CE27FAFCCB00DBCC66 /* MockPersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPersistentContainer.swift; sourceTree = "<group>"; };
+		A9FA99D227FC22A800DBCC66 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		B1CE22728BBCE680DC667FCD /* Pods-TestingCentury.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingCentury.release.xcconfig"; path = "Target Support Files/Pods-TestingCentury/Pods-TestingCentury.release.xcconfig"; sourceTree = "<group>"; };
 		DF70EDDF629D4990D13D61D7 /* Pods-TestingCentury.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingCentury.debug.xcconfig"; path = "Target Support Files/Pods-TestingCentury/Pods-TestingCentury.debug.xcconfig"; sourceTree = "<group>"; };
 		ECDF603415B868D0F38DD502 /* Pods-TestingCentury-TestingCenturyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingCentury-TestingCenturyUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestingCentury-TestingCenturyUITests/Pods-TestingCentury-TestingCenturyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				A98707A027EE94510023114D /* AppDelegate.swift */,
 				A98707A227EE94510023114D /* SceneDelegate.swift */,
 				A98707A427EE94510023114D /* ViewController.swift */,
+				A9FA99D227FC22A800DBCC66 /* HistoryViewController.swift */,
 				A98707A927EE94530023114D /* Assets.xcassets */,
 				A98707AE27EE94530023114D /* Info.plist */,
 				A9E61D0A27EEA0C20099023B /* LaunchScreen.storyboard */,
@@ -488,6 +491,7 @@
 				A9FA99CB27FAEAFB00DBCC66 /* CenturyCoreData+CoreDataProperties.swift in Sources */,
 				A98707A527EE94510023114D /* ViewController.swift in Sources */,
 				A9FA99A727FA660D00DBCC66 /* Century.swift in Sources */,
+				A9FA99D327FC22A800DBCC66 /* HistoryViewController.swift in Sources */,
 				A98707A127EE94510023114D /* AppDelegate.swift in Sources */,
 				A98707A327EE94510023114D /* SceneDelegate.swift in Sources */,
 				A9FA99B827FAA2F800DBCC66 /* CenturyService.swift in Sources */,

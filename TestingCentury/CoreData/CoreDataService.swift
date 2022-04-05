@@ -6,7 +6,7 @@ class CoreDataService {
     // MARK: - Properties
     let context: NSManagedObjectContext
     
-    private static var shared = CoreDataService()
+    private static var shared: CoreDataService?
     
     // MARK: - Init
     private init() {
@@ -28,12 +28,18 @@ class CoreDataService {
     static func shared(context: NSManagedObjectContext? = nil)
     -> CoreDataService {
         guard let context = context else {
-            shared = CoreDataService()
+            guard let shared = shared else {
+                let service = CoreDataService()
+                shared = service
+                return service
+            }
+            
             return shared
         }
         
-        shared = CoreDataService(context: context)
-        return shared
+        let service = CoreDataService(context: context)
+        shared = service
+        return service
     }
     
     func getAllCenturies() -> [Century] {

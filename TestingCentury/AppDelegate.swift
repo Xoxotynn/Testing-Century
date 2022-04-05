@@ -8,7 +8,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        window?.rootViewController = ViewController()
+        let tabBarVc = UITabBarController()
+        let vc = ViewController()
+        let historyVc = HistoryViewController()
+        vc.tabBarItem = UITabBarItem(title: "Century",
+                                     image: nil,
+                                     selectedImage: nil)
+        historyVc.tabBarItem = UITabBarItem(title: "History",
+                                            image: nil,
+                                            selectedImage: nil)
+        
+        tabBarVc.setViewControllers([vc, historyVc], animated: true)
+        
+        window?.rootViewController = tabBarVc
         window?.makeKeyAndVisible()
         
         return true
