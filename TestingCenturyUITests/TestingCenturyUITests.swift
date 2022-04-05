@@ -22,8 +22,31 @@ class TestingCenturyUITests: XCTestCase {
         
         app.tabBars["Tab Bar"].buttons["History"].tap()
         XCTAssert(
-            app.tables["HistoryTableView"].cells.element(matching: .cell, identifier: "CellYear1203").exists,
+            app.tables["HistoryTableView"]
+                .cells
+                .element(matching: .cell, identifier: "CellYear1203")
+                .exists,
             "Century didn't appear in history screen. Probably didn't saved")
+    }
+    
+    func testFindExistingCentury() throws {
+        addCenturyFromTextField("1203")
+        app.tabBars["Tab Bar"].buttons["History"].tap()
+        
+        let textField = app.textFields["Year"]
+        textField.tap()
+        textField.typeText("1203")
+        app.buttons["Search"].tap()
+        
+        XCTAssertEqual(1,
+                       app.tables["HistoryTableView"].cells.count,
+                       "Found more than one century")
+        XCTAssert(
+            app.tables["HistoryTableView"]
+                .cells
+                .element(matching: .cell, identifier: "CellYear1203")
+                .exists,
+            "Desired century was not found in the table view")
     }
     
     private func addCenturyFromTextField(_ year: String) {
