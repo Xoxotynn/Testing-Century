@@ -1,41 +1,36 @@
-//
-//  TestingCenturyUITests.swift
-//  TestingCenturyUITests
-//
-//  Created by Эдуард Логинов on 26.03.2022.
-//
-
 import XCTest
 
 class TestingCenturyUITests: XCTestCase {
 
+    let app = XCUIApplication()
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+        XCUIDevice.shared.orientation = .portrait
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app.launch()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        
     }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testAddingNewCentury() throws {
+        addCenturyFromTextField("1203")
+        
+        XCTAssertTrue(app.staticTexts["13th"].exists,
+                      "Century didn't appear on the main screen")
+        
+        app.tabBars["Tab Bar"].buttons["History"].tap()
+        XCTAssert(
+            app.tables["HistoryTableView"].cells.element(matching: .cell, identifier: "CellYear1203").exists,
+            "Century didn't appear in history screen. Probably didn't saved")
     }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
+    
+    private func addCenturyFromTextField(_ year: String) {
+        let textField = app.textFields["Year"]
+        textField.tap()
+        textField.typeText(year)
+        app.children(matching: .window).element(boundBy: 0).tap()
+        app.buttons["What Century?"].tap()
     }
 }

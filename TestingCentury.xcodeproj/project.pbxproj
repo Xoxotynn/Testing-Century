@@ -17,7 +17,6 @@
 		A98707AA27EE94530023114D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98707A927EE94530023114D /* Assets.xcassets */; };
 		A98707B827EE94530023114D /* WhatCenturyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98707B727EE94530023114D /* WhatCenturyTests.swift */; };
 		A98707C227EE94530023114D /* TestingCenturyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98707C127EE94530023114D /* TestingCenturyUITests.swift */; };
-		A98707C427EE94530023114D /* TestingCenturyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98707C327EE94530023114D /* TestingCenturyUITestsLaunchTests.swift */; };
 		A9E61D0B27EEA0C20099023B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E61D0A27EEA0C20099023B /* LaunchScreen.storyboard */; };
 		A9FA999627FA638600DBCC66 /* CoreDataServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA999527FA638600DBCC66 /* CoreDataServiceIntegrationTests.swift */; };
 		A9FA999A27FA64B400DBCC66 /* CenturyDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9FA999827FA64B400DBCC66 /* CenturyDatabase.xcdatamodeld */; };
@@ -78,7 +77,6 @@
 		A98707B727EE94530023114D /* WhatCenturyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatCenturyTests.swift; sourceTree = "<group>"; };
 		A98707BD27EE94530023114D /* TestingCenturyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingCenturyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98707C127EE94530023114D /* TestingCenturyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingCenturyUITests.swift; sourceTree = "<group>"; };
-		A98707C327EE94530023114D /* TestingCenturyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingCenturyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A9E61D0A27EEA0C20099023B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9FA999527FA638600DBCC66 /* CoreDataServiceIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataServiceIntegrationTests.swift; sourceTree = "<group>"; };
 		A9FA999927FA64B400DBCC66 /* CenturyDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CenturyDatabase.xcdatamodel; sourceTree = "<group>"; };
@@ -184,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				A98707C127EE94530023114D /* TestingCenturyUITests.swift */,
-				A98707C327EE94530023114D /* TestingCenturyUITestsLaunchTests.swift */,
 			);
 			path = TestingCenturyUITests;
 			sourceTree = "<group>";
@@ -522,7 +519,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9FA99BD27FAA8FD00DBCC66 /* Century.swift in Sources */,
-				A98707C427EE94530023114D /* TestingCenturyUITestsLaunchTests.swift in Sources */,
 				A98707C227EE94530023114D /* TestingCenturyUITests.swift in Sources */,
 				A9FA99CD27FAEAFB00DBCC66 /* CenturyCoreData+CoreDataProperties.swift in Sources */,
 				A9FA99BB27FAA88C00DBCC66 /* CoreDataService.swift in Sources */,

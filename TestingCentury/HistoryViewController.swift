@@ -23,6 +23,10 @@ class HistoryViewController: UIViewController {
     }
     
     private func setupTableView() {
+        tableView.accessibilityIdentifier = "HistoryTableView"
+        
+        tableView.backgroundColor = .clear
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self,
@@ -52,6 +56,10 @@ extension HistoryViewController: UITableViewDelegate & UITableViewDataSource {
         var content = cell.defaultContentConfiguration()
         content.text = "\(century.century) Century"
         content.secondaryText = "Year \(century.year)"
+        
+        cell.accessibilityIdentifier = "CellYear\(century.year)"
+        cell.tintColor = .darkText
+        cell.backgroundColor = .clear
         cell.contentConfiguration = content
         
         return cell

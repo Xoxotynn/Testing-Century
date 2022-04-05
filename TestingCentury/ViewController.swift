@@ -54,7 +54,11 @@ class ViewController: UIViewController {
     
     // MARK: - Private setup methods
     private func setupView() {
+        view.addGestureRecognizer(UITapGestureRecognizer(
+            target: self,
+            action: #selector(hideKeyboard)))
         view.backgroundColor = .white
+        
         view.addSubview(yearTextField)
         view.addSubview(centuryStackView)
         centuryStackView.addArrangedSubview(centuryTitleLabel)
@@ -129,7 +133,6 @@ class ViewController: UIViewController {
     
     // MARK: - Actions
     @objc private func calculateCentury() {
-        view.endEditing(true)
         let centuryValue = whatCentury(yearTextField.text ?? "")
         guard let year = yearTextField.text,
               !centuryValue.isEmpty else { return }
@@ -138,6 +141,10 @@ class ViewController: UIViewController {
         centuryService.addCentury(century)
         centuryLabel.text = centuryValue
         self.century = century
+    }
+    
+    @objc private func hideKeyboard() {
+        view.endEditing(true)
     }
 }
 
